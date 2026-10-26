@@ -52,10 +52,10 @@ img{max-width:100%}
 .k-head{padding:12px 16px !important;gap:8px !important}
 .k-logo{font-size:30px !important}
 .k-nav{font-size:11px !important;letter-spacing:.12em !important;gap:12px !important}
-.k-hero{min-height:0 !important;background:#3A1424 !important}
-.k-hero>img{position:static !important;height:auto !important;aspect-ratio:16/10;object-position:88% center !important}
+.k-hero{min-height:0 !important;background:#3A1424 !important;display:flex;flex-direction:column}
+.k-hero>img{position:static !important;order:2;height:auto !important;aspect-ratio:16/10;object-position:88% center !important;-webkit-mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.35) 20%,#000 48%);mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.35) 20%,#000 48%)}
 .k-hero-shade{display:none}
-.k-hero-in{padding:32px 16px 48px !important;gap:20px !important}
+.k-hero-in{order:1;padding:40px 16px 12px !important;gap:20px !important}
 .k-h1{font-size:46px !important}
 .k-lead{font-size:16px !important}
 .k-cta{padding:17px 26px !important;font-size:12px !important;letter-spacing:.16em !important;gap:12px !important}
