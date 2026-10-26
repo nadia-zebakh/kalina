@@ -1,29 +1,28 @@
-# Site V3 — DA prune & or — design reference
+# kalina — Site V3 (DA prune & or)
 
-This is a design mockup created in a visual design tool, exported as a
-standalone page. Treat it as a REFERENCE MOCKUP, not production code:
-the markup and inline styles carry the design's precise values — colors,
-font sizes, spacing, radii, shadows, layout — which an implementation
-should replicate faithfully in its own components and styling system
-rather than copy wholesale.
+Landing page for the kalina Fusion Collagène+ coffret. It's a static site
+with no build step, ready to deploy on Vercel.
 
 ## Contents
 
-- `Site-v3.dc.html` — the artboard (a Design Component: an `<x-dc>`
-  template + a small logic class). The values to replicate live in its
-  inline `style="…"` attributes and the `<helmet><style>` block.
-- `assets/` — files uploaded to the design (images, fonts, media)
-- `support.js`, `vendor/react*.js` — the runtime that renders the
-  component in a browser; not part of the design.
+- `index.html` — the page (a Design Component: an `<x-dc>` template + a
+  small logic class). Styles live in its inline `style="…"` attributes and
+  the `<helmet><style>` block.
+- `assets/` — images used by the page (18 files).
+- `support.js`, `vendor/react*.js` — the runtime that renders the page in
+  the browser.
+- `vercel.json` — Vercel settings (clean URLs, long-term caching for assets).
 
-## Uploaded files
+## Deploy on Vercel
 
-Images, fonts and media uploaded to the design are written once each under
-`assets/` — 9 in this export — and the exported files refer to them there. A
-reference a script puts together while the page runs (for example
-`"/_blob/" + id`) is not rewritten and does not load from this folder.
+1. On vercel.com, choose **Add New → Project** and import the
+   `nadia-zebakh/kalina` GitHub repository.
+2. Leave the settings as detected: Framework Preset **Other**, Root
+   Directory `./`, no build command, no output directory.
+3. Click **Deploy**. Every push to `main` then redeploys automatically.
 
-## Viewing
+## Viewing locally
 
-Serve the folder (e.g. `python3 -m http.server`) and open `Site-v3.dc.html`;
-some browsers block the scripts over file://.
+Serve the folder (e.g. `python3 -m http.server`) and open
+http://localhost:8000/. Opening `index.html` directly over file:// won't
+work in some browsers because they block the scripts.
